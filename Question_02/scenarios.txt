@@ -1,0 +1,25 @@
+Feature: Login 
+
+I.	Scenario: Login successfully
+Given a user accesses a login page
+When the user submits their data with correct username and password
+Then it must be redirected to a logged area
+
+II.	Scenario: Login attempt with incorrect username and/or password
+Given a user accesses a login page
+When the user fills in the fields with incorrect username and/or password
+Then it should see “Usuário e/ou senha inválidos. Verifique o usuário e senha e tente novamente.”
+
+Feature: HelpDesk
+
+III. Scenario: Successfully opening a case
+Given an achiever accesses the helpdesk
+When the achiever submits a case with the required fields filled in
+Then the case stays in progress
+
+Feature: Change the password
+
+IV.	Scenario: Changing password successfully
+Given a user accesses the profile page
+When the user clicks "Mudar senha", fills in the fields and submits
+Then it should see “Perfil atualizado!”
